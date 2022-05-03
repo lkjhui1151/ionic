@@ -1,0 +1,72 @@
+
+<ion-header>
+
+  <ion-toolbar class="header">
+    <br>
+    <ion-row>
+      <ion-col class="ion-align-self-center">
+        <ion-title size="large" class="h2">Create</ion-title>
+      </ion-col>
+    </ion-row>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content id="tier" color="dark">
+  <br>
+  <ion-row>
+    <ion-col size="12" class="test">
+      <ion-item>
+        <ion-label color="light">Project Name :</ion-label>
+        <ion-input type="text" placeholder="Project Name" #input_projectname color="light"></ion-input>
+        
+        
+      </ion-item>
+    </ion-col>
+    
+    <ion-col size="12">
+      <ion-item (click)="showadvancePicker()">
+
+        <ion-label color="light">Hours :</ion-label>
+        <ion-label placeholder="0" color="primary" #input_hours> {{ selector[0] }}</ion-label>
+        
+        <ion-label color="light">min :</ion-label>
+        <ion-label placeholder="0" color="primary" #input_min> {{ selector[1] }}</ion-label>
+
+
+      </ion-item>
+    </ion-col>
+    <ion-col size="12">
+      <ion-item>
+        <ion-label color="light">Object weight :</ion-label>
+        <ion-input type="number" color="primary" placeholder="0" class="text-center" #input_weight></ion-input>
+        <ion-label color="light">Kg</ion-label>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-item>
+        <ion-label color="light">Limit temperature :</ion-label>
+        <ion-input type="number" color="primary" placeholder="0" class="text-center" #input_temp_limit></ion-input>
+        <ion-label color="light">°C</ion-label>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-item>
+        <ion-label color="light">Start temperature :</ion-label>
+        <ion-input type="number" color="primary" placeholder="0" class="text-center" #input_temp_start></ion-input>
+        <ion-label color="light">°C</ion-label>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-button color="success" expand="block"(click)="cre_project()" >ตกลง</ion-button>
+    </ion-col>
+
+    <ion-col>
+      <ion-button expand="block" (click)="dismisscreproject()" >ยกเลิก</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

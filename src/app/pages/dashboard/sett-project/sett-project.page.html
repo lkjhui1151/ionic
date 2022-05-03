@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-row>
+      <ion-col size="4">
+       
+      </ion-col>
+      <ion-col size="4">
+        <div class="text-center">
+          <ion-label>Setting</ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="4" (click)="dismisscreproject()">
+        <div class="text-end">
+          <ion-icon name="close" color="danger" class="close"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="tier" color="dark">
+  <!-- <img src="" class="img-fluid"> -->
+  <ion-row>
+    <ion-col size="12" class="test">
+
+      <ion-item>
+        <ion-label color="light">Project Name</ion-label>
+        <ion-input color="light" placeholder="Project Name" value="{{projectname}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="light">Limit temperature:</ion-label>
+        <ion-input color="light" placeholder="Limit temperature" class="text-center" value="{{temp_limit}}"></ion-input>
+        <ion-label color="light">°C</ion-label>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label color="light">Start temperature:</ion-label>
+        <ion-input color="light" placeholder="Start temperature" class="text-center" value="{{temp_start}}"></ion-input>
+        <ion-label color="light">°C</ion-label>
+      </ion-item>
+    </ion-col>
+
+<ion-col size="12">
+  <ion-button color="success" expand="block">Save Setting</ion-button>
+</ion-col>
+  </ion-row>
+</ion-content>

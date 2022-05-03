@@ -1,0 +1,98 @@
+<ion-header>
+    <ion-toolbar class="header">
+        <ion-title mode="md">
+            <ion-row>
+                <ion-col size="10">
+                    <ion-title size="large" class="h2">Dashboard</ion-title>
+                </ion-col>
+                <ion-col size="2" class="ion-text-center" (click)="goto_creproject()">
+                    <ion-icon class="Add" name="add-outline"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+    <ion-grid [fixed]="true">
+        <ion-row class="padding content-status mt-1">
+            <!-- Check box -->
+            <ion-col size="5">
+                <ion-item lines="none">
+                    <ion-label class="status" color="light">{{status_checked}}</ion-label>
+                    <ion-toggle color="success" *ngIf="projectname != null"  (ionChange)="Clicked()"></ion-toggle>
+                </ion-item>
+            </ion-col>
+            <!-- End Check box -->
+
+            <ion-col size="5" class="d-flex align-items-center">
+                <ion-label class="h5">{{projectname}}</ion-label>
+            </ion-col>
+
+            <!-- Delete Button -->
+            <ion-col size="1" class="d-flex align-items-center">
+                <ion-icon name="trash-bin" class="cancel" *ngIf="projectname != null" (click)="del_project(projectname)"></ion-icon>
+            </ion-col>
+            <!-- End Delete Button -->
+        </ion-row>
+
+        <ion-row class="content-chart mt-3">
+            <ion-col class="ion-text-right">
+                <!-- <ion-icon name="settings-sharp" (click)="settproject()"></ion-icon> -->
+                <div class="ion-text-left">
+                    <h3>Countdown Time</h3>
+                    <hr>
+                </div>
+                <div class="ion-text-center">
+                    <div class="ion-text-center">
+                        <countdown class="countdown" #countdown [config]="{leftTime: timeData,notify: [ 2, 5 ]}"></countdown>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="content-chart mt-3">
+            <ion-col size="12">
+                <div class="ion-text-left">
+                    <h3>Temperature</h3>
+                    <hr>
+                </div>
+            </ion-col>
+
+            <ion-col class="text-center">
+                <circle-progress
+                [percent]=temp
+                [radius]="100"
+                [outerStrokeWidth]="8"
+                [innerStrokeWidth]="4"
+                [outerStrokeColor]=temp_line
+                [innerStrokeColor]="'#FFFFFF'"
+                [animation]="true"
+                [animationDuration]="300"
+                [showSubtitle]="true"
+                [titleFontSize]="51"
+                [subtitleFontSize]="20"
+                [unitsFontSize]="25"
+                [subtitle]="'องศาเซลเซียส'"
+                [units]="''"
+                [space]="'-5'"
+                [titleColor]="'#ffffff'"
+                [unitsColor]="'#ffffff'"
+
+                ></circle-progress>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="content-chart mt-3">
+            <ion-col class="ion-text-right">
+                <div class="ion-text-left">
+                    <h3>Chart Temp.</h3>
+                    <hr>
+                </div>
+            </ion-col>
+            <canvas id="canvas-chart" width="auto" height="600px"></canvas>
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>

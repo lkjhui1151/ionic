@@ -1,0 +1,26 @@
+ion-icon {
+  --ionicon-stroke-width: 100px;
+}
+
+.header{
+  --background: #000000;
+  padding-bottom: 10px;
+}
+
+.h2{
+  padding-top: 20px;
+  text-align: center;
+  color: White;
+}
+
+ion-content {
+  --ion-item-background: #33333385;
+  --ion-color-step-250: #313131;
+  --ion-item-border:10px
+
+}
+
+.close{
+  width: 30px;
+  height: 30px;
+}

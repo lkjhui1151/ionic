@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-title mode="md">
+      <ion-row>
+        <ion-col size="12" class="ion-align-self-center">
+          <ion-title size="large" class="h2">Report</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- <ion-content fullscreen color="dark">
+
+  <ion-row class="row">
+    <ion-col *ngFor="let item of datareport" size="11" class="mx-3 my-1"style="background-color:#80808040; border-radius: 10px;">
+      <ion-list>
+        <ion-item-sliding>
+          <ion-item (click)="showreportdetail(item.projectid)" lines="none">
+            <ion-label color="light">
+              <h2>{{item.projectname}}</h2>
+              <p>{{item.reportdate}}</p>
+            </ion-label>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option color="danger" (click)="reportdetail_del()">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-col>
+    
+  </ion-row>
+
+</ion-content> -->
+
+<ion-content color="dark">
+
+  <ion-card *ngFor="let i of project" color="dark">
+
+    <ion-item-sliding color="dark">
+
+      <ion-item-options side="start">
+
+        <ion-item-option (click)="showreportdetail(i.id)">
+          <ion-icon name="reader-outline"></ion-icon>
+        </ion-item-option>
+
+        <ion-item-option color="danger" (click)="reportdetail_del(i.id)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-item-option>
+      
+      </ion-item-options>
+
+      <ion-item class="list-item" lines="none">
+        <ion-label>
+          <ion-row>
+            <ion-col size="6"><h2>{{ i.name }}</h2></ion-col>
+            <ion-col size="6"><h2>{{ i.hourns }} ชั่วโมง {{ i.minute }} นาที</h2></ion-col>
+          </ion-row>        
+          <p>ID : {{ i.id }} น้ำหนัก : {{ i.weight }} อุณหภูมิ : {{ i.temperature }} องศา</p>
+        </ion-label>
+      </ion-item>
+
+    </ion-item-sliding>
+
+  </ion-card>
+
+</ion-content>

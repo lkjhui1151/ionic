@@ -1,0 +1,72 @@
+ion-content {
+    --ion-item-background:#00000000;  
+}
+
+.header{
+    --background: #000000;
+    padding-bottom: 10px;
+}
+
+.h2{
+    color: White;
+}
+
+.content-chart{
+    background-color: rgba(128, 128, 128, 0.25);
+    border-radius: 20px;
+    padding:5%;
+
+}
+.content-hotlimit{
+    background-color: rgba(128, 128, 128, 0.25);
+    // border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding:1%;
+    
+}
+
+.content-status{
+    background-color: rgba(128, 128, 128, 0.25);
+    // border: 1px solid #ffffff;
+    border-radius: 50px;
+    padding:1%;
+
+}
+.Add {
+    --ionicon-stroke-width: 100px;
+    color: White;
+}
+.online{
+    color:green;
+}
+
+.progress-wrapper {
+    position: relative;
+    margin: 20px auto;
+    font-size: 20px;
+}
+.current {
+    position: absolute;
+    color: #bbb;
+    font-weight: 20;
+    line-height: 1;
+    
+}
+
+round-progress {
+    margin: auto;
+}
+.countdown{
+  font-size: 70px;
+}
+.countdown-btn{
+    font-size: 75px;
+}
+
+.cancel{
+    color:red;
+    width: 20px;
+    height: 20px;
+}
+
+
